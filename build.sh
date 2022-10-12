@@ -4,7 +4,7 @@ set -e
 e () {
     echo $( echo ${1} | jq ".${2}" | sed 's/\"//g')
 }
-m=$(./src/metadata.sh)
+m=$(../src/metadata.sh)
 
 org=$(e "${m}" "org")
 name=$(e "${m}" "name")
