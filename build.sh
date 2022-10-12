@@ -10,5 +10,5 @@ org=$(e "${m}" "org")
 name=$(e "${m}" "name")
 version=$(e "${m}" "version")
 
-./gradlew build --stacktrace
-docker build -f ./Dockerfile -t ${org}/${name}:${version}-bronze .
+../gradlew build --stacktrace
+docker build -f ../Dockerfile -t ${org}/${name}:${version}-bronze .
