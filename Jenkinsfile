@@ -11,9 +11,9 @@ node {
         stage('Build'){
             env.NODE_ENV = "build"
             print "Environment will be : ${env.NODE_ENV}"
-                {
-                sh('build.sh')
-                                    }
+            dir('./adminutil') {
+                sh('./build.sh')
+            }
         }
 
         stage('Publish'){
