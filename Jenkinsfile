@@ -19,7 +19,7 @@ node {
         stage('Publish'){
             echo 'Push to Repo'
             dir('./adminutil') {
-                sh './src/metadata.sh > metadata.json'
+                sh '../src/metadata.sh > metadata.json'
                 sh 'ARTIFACT_LABEL=bronze ./dockerPushToRepo.sh'
                 sh 'cat metadata.json'
                 archive includes: "metadata.json"
