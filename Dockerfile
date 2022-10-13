@@ -4,7 +4,7 @@ ENV APP_HOME=/opt/app
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
 
-COPY build/libs/adminutil-*.jar adminutil.jar
+COPY . $APP_HOME/*.jar
 
 EXPOSE 4000
 
